@@ -3,15 +3,15 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [project]
-name = "<your lib name>"
+name = "social-media-data-source"
 version = "0.0.0"
-description = "👨‍💻 A clear brief for your library."
+description = "A library for retrieving posts from social media platforms by hashtags or keywords"
 authors = [
-    { name = "<Your name>", email = "<Your e-mail address>" }
+    { name = "Bryant", email = "bryant@example.com" }
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
-keywords = ["the keywords for your lib"]
+keywords = ["social media", "instagram", "facebook", "threads", "api"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -20,20 +20,23 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "requests>=2.31.0",
+    "pydantic>=2.5.0",
+    "python-dotenv>=1.0.0"
+]
 
 [tool.poetry]
 packages = [
-    { include = "<Your library source code folder>" },
+    { include = "social_media_data_source", from = "src" },
 ]
 
 [project.urls]
-Homepage = "<home page of your repo or documentation, up to you>"
-Documentation = "<the documentation host URL of your lib>"
-Repository = "https://github.com/<your username>/<your repository>"
-Changelog = "<the release note page in documentation or GitHub release info>"
+Homepage = "https://github.com/Chisanan232/POC-data-source-from-social-medium"
+Repository = "https://github.com/Chisanan232/POC-data-source-from-social-medium"
 
 [tool.poetry.group.dev]
 optional = true
